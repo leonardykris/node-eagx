@@ -1,0 +1,26 @@
+{
+  "name": "eagxoxford",
+  "version": "1.0.0",
+  "description": "landing page for EAGxOxford 2016",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonardykris/eagxoxford.git"
+  },
+  "keywords": [
+    "eag",
+    "effective",
+    "altruism",
+    "landing",
+    "page"
+  ],
+  "author": "leonardy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leonardykris/eagxoxford/issues"
+  },
+  "homepage": "https://github.com/leonardykris/eagxoxford#readme"
+}
