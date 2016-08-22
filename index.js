@@ -64,11 +64,11 @@ io.sockets.on('connection', function(socket){
 /////// ADD ALL YOUR ROUTES HERE  /////////
 
 server.get('/', function(req,res){
-  res.render('index.jade', {
+  res.render('ea.jade', {
     locals : {
-      title : 'Your Page Title',
-      description: 'Your Page Description',
-      author: 'Your Name',
+      title : 'EAGxOxford',
+      description: 'EAGxOxford is a EA chapter in Oxford',
+      author: 'Leonardy',
       analyticssiteid: 'XXXXXXX'
     }
   });
