@@ -9,14 +9,18 @@
     "socket.io": "0.8.7"
   },
   "devDependencies": {
-    "vows": "0.5.x",
     "mocha": "*",
-    "should": "*"
+    "node-sass": "^3.8.0",
+    "nodemon": "^1.10.2",
+    "should": "*",
+    "vows": "0.5.x"
   },
   "description": "landing page for EAGxOxford 2016",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "./bin/build-css",
+    "watch-css": "./bin/watch-css"
   },
   "repository": {
     "type": "git",

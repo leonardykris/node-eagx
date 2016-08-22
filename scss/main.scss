@@ -1,0 +1,25 @@
+// Colors
+$ea_blue: #6A95CE;
+$ea_blue_light: #85B9FE;
+$ea_green: #33C3CC;
+$oxford_blue: #002147;
+$white: #FFFFFF;
+$black: #000000;
+
+$gray_1: #555555;
+$gray_2: #5D5D5D;
+$gray_3: #DDDDDD;
+$gray_4: #F4EFE9;
+
+$primary_color: $ea_blue;
+$secondary_color: $gray_1;
+
+body {
+  margin: 0 auto;
+  background-color: $gray_4;
+  color: $black;
+}
+
+div {
+  padding: 20px;
+}

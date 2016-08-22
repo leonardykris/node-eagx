@@ -12,7 +12,7 @@ server.configure(function(){
   server.use(connect.bodyParser());
   server.use(express.cookieParser());
   server.use(express.session({ secret: "shhhhhhhhh!"}));
-  server.use(connect.static(__dirname + '/static'));
+  server.use(connect.static(__dirname + '/public'));
   server.use(server.router);
 });
 
