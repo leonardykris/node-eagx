@@ -1,6 +1,18 @@
 {
   "name": "eagxoxford",
-  "version": "1.0.0",
+  "version": "0.0.1",
+  "dependencies": {
+    "connect": "1.8.5",
+    "express": "2.5.2",
+    "jade": "0.20.0",
+    "mongoose": "2.4.8",
+    "socket.io": "0.8.7"
+  },
+  "devDependencies": {
+    "vows": "0.5.x",
+    "mocha": "*",
+    "should": "*"
+  },
   "description": "landing page for EAGxOxford 2016",
   "main": "index.js",
   "scripts": {
@@ -22,5 +34,5 @@
   "bugs": {
     "url": "https://github.com/leonardykris/eagxoxford/issues"
   },
-  "homepage": "https://github.com/leonardykris/eagxoxford#readme"
+  "homepage": "https://eagxoxford.org"
 }
