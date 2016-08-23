@@ -23,7 +23,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "./bin/build-css",
-    "watch-css": "./bin/watch-css"
+    "watch-css": "./bin/watch-css",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
