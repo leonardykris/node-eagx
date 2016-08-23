@@ -16,6 +16,9 @@
     "vows": "0.5.x"
   },
   "description": "landing page for EAGxOxford 2016",
+  "engines": {
+    "node": "5.7.1"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
