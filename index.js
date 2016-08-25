@@ -39,6 +39,7 @@ server.error(function(err, req, res, next){
       },
       status: 500
     });
+    console.log({err});
   }
 });
 server.listen(port);
@@ -64,7 +65,7 @@ io.sockets.on('connection', function(socket){
 /////// ADD ALL YOUR ROUTES HERE  /////////
 
 server.get('/', function(req,res){
-  res.render('ea.jade', {
+  res.render('index.jade', {
     locals : {
       title : 'EAGxOxford',
       description: 'EAGxOxford is a EA chapter in Oxford',
