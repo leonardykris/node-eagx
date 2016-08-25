@@ -1,6 +1,103 @@
 extends layout
 
 block content
-	div#top
-		a#sender 'Send a Message'
-		ul#receiver
+  .container
+    .row
+      .col-xs-10.col-xs-offset-1.col-md-4.col-md-offset-4.text-center
+        p
+          span#event-org EAGxOxford
+        p
+          span#event-title Doing Good Better
+        p
+          span#event-date 18-20 November 2016
+    .row
+      .col-xs-10.col-xs-offset-1.col-lg-4.col-lg-offset-8
+        p We have unprecedented opportunities to do good. A mass of data. Exponentially improving technology. A global mindset. But working out how to do it isn’t easy. What are the most pressing problems the world faces today? And perhaps most importantly, what practical means can we find to answer this question, and to actually do the most good?
+        p EAGx Oxford is a global summit to find and face the world's most pressing problems. Driven by compassion, guided by evidence. The weekend conference will bring together more than 400 students and entrepreneurs, researchers and policymakers, and leaders in philanthropy and technology to collaborate in workshops, panels and discussions.
+    .row
+      .col-xs-10.col-xs-offset-1.col-md-4.col-md-offset-4.text-center
+        span#email-tagline If you’re ready to maximise your impact, you’re ready to join us.
+        form.form
+          .form-group
+            label(for="signup-email") Email Address
+            input.form-control(type="email", name="signup-email", placeholder="Email Address")
+          .form-group
+            label(for="signup-answer") What is the world’s most pressing issue?
+            input.form-control(type="text", name="signup-answer", placeholder="The world most pressing issue is")
+          .form-group
+            button.btn.btn-default#signup-button(type="submit") Submit
+    .row
+      .col-xs-10.col-xs-offset-1.col-md-4
+        h3 Our Commitment to Impact
+        p
+         b We take impact seriously.
+        p It is estimated that the Against Malaria Foundation, perhaps the world’s most effective charity, saves a life for every $3500 it spends. That covers every step of the process including administration and transportation required to prevent the fatal infection of a child who otherwise would not have lived.
+        p
+         b This is our benchmark.
+        p We’re not just talking about changing the world: we are committed to measuring all the money we spend and design choices we make to ensure that the projects, friendships, plans and ideas created by EAGxOxford translate into tangible social good. Otherwise we could just have given the money to AMF.
+    .row
+      .col-xs-10.col-xs-offset-1.col-md-4.col-md-offset-8
+        h3 About Effective Altruism
+        p Doing good better is the central premise of Effective Altruism (EA), a growing movement rethinking social impact. As a social movement, EA has already:
+        ul
+          li Moved $170+ to effective charities through Givewell.
+          li Helped 1100+ people to choose high impact careers through 80,000 Hours.
+          li Funded 30 million+ deworming treatments through SCI.
+          li Transferred 75 million+ directly to the world’s poorest through GiveDirectly.
+        p To find out more about EA, you can check out #[a(href="https://effectivealtruism.org", target="_blank") effectivealtruism.org].
+
+
+
+  //- section#content-wrapper
+    .container
+      section.home-section.home-section-hero
+        .row
+          .col-md-6.col-md-offset-3
+            h2#effective-altruism-is-changing-the-way-we-do-good
+              a.heading-permalink(href='#effective-altruism-is-changing-the-way-we-do-good')
+              | Effective altruism is changing the way we do good.
+            p.first-paragraph
+              | Effective altruism is about answering one simple question: how can we use our resources to help others the most?
+            p
+              | Rather than just doing what feels right, we use evidence and careful analysis to find the very best causes to work on.
+            p
+              | But it's no use answering the question unless you act on it. Effective altruism is about following through. It's about being generous with your time and your money to do the most good you can.
+            .center
+              a#home-intro-learn-more-button.btn.btn-primary.home-section-hero-learn-more(href='/articles/introduction-to-effective-altruism') Learn more…
+    .home-alternate-background
+      .container
+        .row
+          .col-xs-10.col-xs-offset-1.col-md-5.col-md-offset-1
+            section.home-section.home-section-cause-prioritisation-tool
+              h2
+                | Not sure what cause you should work on?
+              p
+                | Use our
+                a#home-cause-prioritisation-tool-inline(href='/cause-prioritization-tool/') cause prioritisation tool
+                |  to find out.
+              a#home-cause-prioritisation-tool-button.btn.btn-default(href='/cause-prioritization-tool/') Try it now
+          .col-xs-10.col-xs-offset-1.visible-xs.visible-sm
+            hr.home-section-divider
+          .col-xs-10.col-xs-offset-1.col-md-5.col-md-offset-0
+            section.home-section.home-section-newsletter-signup
+              h2 Join the effective altruism newsletter
+              p (Around one email per month, no spam)
+              .newsletter-signup
+                .newsletter-signup-call-to-action-wrapper
+                  p.newsletter-signup-call-to-action For news and opportunities:
+                .newsletter-signup-form-wrapper
+                  form.form.newsletter-signup-form(action='https://effectivealtruism.us8.list-manage.com/subscribe/post?u=52b028e7f799cca137ef74763&amp;id=51c1df13ac', method='post', target='_blank', novalidate='')
+                    .input-group
+                      label.control-label.sr-only(for='newsletter-signup-email', aria-hidden='true') Email Address (required)
+                      input.form-control.newsletter-signup-email(placeholder='Email address', name='EMAIL')
+                      span.input-group-btn
+                        button.btn.btn-primary.newsletter-signup-subscribe Subscribe
+                    .clearfix
+                      .newsletter-signup-result
+                      div(style='position: absolute; left: -5000px', aria-hidden='true')
+                        input(name='b_52b028e7f799cca137ef74763_51c1df13ac', tabindex='-1')
+                      input(type='hidden', value='effectivealtruism.org', name='SOURCE')
+              script.
+                ! function() {
+                for (var e = document.getElementsByClassName("newsletter-signup-subscribe"), s = 0; s < e.length; s++) e[s].className += " disabled"
+                }()
