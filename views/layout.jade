@@ -1,7 +1,25 @@
 doctype html
-html
+html(lang='en')
   head
     title= title
+    //- Meta: General Information
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(name="description", content="EAGxOxford")
+    meta(name="author", content="EAGxOxford")
+    meta(name="viewport", content='width=device-width, initial-scale=1')
+    //- Meta: Facebook Open Graph
+    meta(property='og:title', content='Home - EAGxOxford')
+    meta(property='og:type', content='website')
+    meta(property='og:url', content='https://www.eagxoxford.org/')
+    meta(property='og:locale', content='en_US')
+    meta(property='og:site_name', content='EAGxOxford')
+    meta(property='og:description', content='Effective altruism is about answering one simple question: how can we use our resources to help others the most?')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet", href="/css/bootstrap.min.css")
+
   body
     block content
+
+  script(defer, src="/js/jquery.min.js")
+  script(defer, src="/js/bootstrap.min.js")
