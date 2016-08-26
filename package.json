@@ -1,46 +1,17 @@
 {
-  "name": "eagxoxford",
-  "version": "0.0.1",
-  "dependencies": {
-    "connect": "1.8.5",
-    "express": "2.5.2",
-    "jade": "0.20.0",
-    "mongoose": "2.4.8",
-    "socket.io": "0.8.7"
-  },
-  "devDependencies": {
-    "mocha": "*",
-    "node-sass": "^3.8.0",
-    "nodemon": "^1.10.2",
-    "should": "*",
-    "vows": "0.5.x"
-  },
-  "description": "landing page for EAGxOxford 2016",
-  "engines": {
-    "node": "5.7.1"
-  },
-  "main": "index.js",
+  "name": "eagxoxford_2",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "./bin/build-css",
-    "watch-css": "./bin/watch-css",
-    "start": "node index.js"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/leonardykris/eagxoxford.git"
-  },
-  "keywords": [
-    "eag",
-    "effective",
-    "altruism",
-    "landing",
-    "page"
-  ],
-  "author": "leonardy",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/leonardykris/eagxoxford/issues"
-  },
-  "homepage": "https://eagxoxford.org"
+  "dependencies": {
+    "body-parser": "~1.15.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.13.4",
+    "jade": "~1.11.0",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.0"
+  }
 }
