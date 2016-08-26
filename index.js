@@ -1,12 +1,16 @@
-//setup Dependencies
-var connect = require('connect'),
-  express = require('express'),
-  io = require('socket.io'),
-  port = (process.env.PORT || 8081);
+// Setup Dependencies
+const connect = require('connect');
+const express = require('express');
+const http = require('http');
 
-//Setup Express
-var server = express.createServer();
-server.configure(function(){
+const app = express();
+const server = http.Server(app);
+const io = require('socket.io')(server);
+const port = (process.env.PORT || 8081);
+
+// Setup Express
+// const server = express.createServer();
+app.configure(function(){
   server.set('views', __dirname + '/views');
   server.set('view options', { layout: false });
   server.use(connect.bodyParser());
@@ -16,7 +20,7 @@ server.configure(function(){
   server.use(server.router);
 });
 
-//setup the errors
+// Setup the errors
 server.error(function(err, req, res, next){
   if (err instanceof NotFound) {
     res.render('404.jade', {
@@ -44,8 +48,8 @@ server.error(function(err, req, res, next){
 });
 server.listen(port);
 
-//Setup Socket.IO
-var io = io.listen(server);
+// Setup Socket.IO
+// var  = io.listen(server);
 io.sockets.on('connection', function(socket){
   console.log('Client Connected');
   socket.on('message', function(data){
