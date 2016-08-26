@@ -1,36 +1,51 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  //- h1= title
+  //- p Welcome to #{title}
 
+  #banner
+    .container
+      .row
+        .col-xs-12.col-md-8.col-md-offset-2.text-center#banner-text
+          //- p
+            //- span#event-org= title
+          img(src="/images/Logo_Oxford_Yearless_White_2x.png").img-responsive.center-block
+          p
+            span#event-title= tagline
+          p
+            span#event-date= conf_date
   .container
     .row
-      .col-xs-10.col-xs-offset-1.col-md-4.col-md-offset-4.text-center
+      .col-xs-12.col-md-8.col-md-offset-2#top-blurb
+        p We have unprecedented opportunities to do good. A mass of data. Exponentially improving technology. A global mindset. But working out how to do it isn’t easy. What are the most pressing problems the world faces today? And perhaps most importantly, #[b what practical means can we find to answer this question, and to actually do the most good?]
+        p #[b EAGxOxford] is a global summit to find and face the world's most pressing problems. Driven by compassion, guided by evidence. The weekend conference will bring together more than #[b 400] students and entrepreneurs, researchers and policymakers, and leaders in philanthropy and technology to collaborate in workshops, panels and discussions.
         p
-          span#event-org EAGxOxford
-        p
-          span#event-title Doing Good Better
-        p
-          span#event-date 18-20 November 2016
+          span#email-tagline If you’re ready to maximise your impact, you’re ready to join us.
+          //- Begin MailChimp Signup Form
+          #mc_embed_signup
+            form(action="//eagxoxford.us14.list-manage.com/subscribe/post?u=eda63a55fe6a7658455876e87&amp;id=7133686410", method="post", id="mc-embedded-subscribe-form", name="mc-embedded-subscribe-form", class="validate", target="_blank", novalidate).form
+              #mc_embed_signup_scroll
+                .form-group.mc-field-group
+                  //- label(for="mce-EMAIL") Email Address
+                  input#mce-EMAIL.form-control.required.email(type="email", name="EMAIL", placeholder="Email Address")
+                .form-group.mc-field-group
+                  //- label(for="mce-ISSUE") What's the world most pressing issue?
+                  textarea#mce-ISSUE.form-control(rows="3", name="ISSUE", placeholder="What's the world most pressing issue? (Optional)")
+                #mce-responses.clear
+                  .response#mce-error-response(style="display:none")
+                  .response#mce-success-response(style="display:none")
+                //- real people should not fill this in and expect good things - do not remove this or risk form bot signups
+                .mailchimp-hide(style="position: absolute; left: -5000px;", aria-hidden="true")
+                  input(type="text", name="b_eda63a55fe6a7658455876e87_7133686410", tabindex="-1", value="")
+                .form-group.clear
+                  input#mc-embedded-subscribe.button.btn.btn-default(type="submit", value="Subscribe", name="subscribe")
+          //- End mc_embed_signup
     .row
-      .col-xs-10.col-xs-offset-1.col-lg-4.col-lg-offset-8
-        p We have unprecedented opportunities to do good. A mass of data. Exponentially improving technology. A global mindset. But working out how to do it isn’t easy. What are the most pressing problems the world faces today? And perhaps most importantly, what practical means can we find to answer this question, and to actually do the most good?
-        p EAGx Oxford is a global summit to find and face the world's most pressing problems. Driven by compassion, guided by evidence. The weekend conference will bring together more than 400 students and entrepreneurs, researchers and policymakers, and leaders in philanthropy and technology to collaborate in workshops, panels and discussions.
-    .row
-      .col-xs-10.col-xs-offset-1.col-md-4.col-md-offset-4.text-center
-        span#email-tagline If you’re ready to maximise your impact, you’re ready to join us.
-        form.form
-          .form-group
-            label(for="signup-email") Email Address
-            input.form-control(type="email", name="signup-email", placeholder="Email Address")
-          .form-group
-            label(for="signup-answer") What is the world’s most pressing issue?
-            input.form-control(type="text", name="signup-answer", placeholder="The world most pressing issue is")
-          .form-group
-            button.btn.btn-default#signup-button(type="submit") Submit
-    .row
-      .col-xs-10.col-xs-offset-1.col-md-4
+      .col-xs-10.col-md-4.col-md-offset-4.text-center
+
+    .row#impact
+      .col-xs-10.col-md-4
         h3 Our Commitment to Impact
         p
          b We take impact seriously.
@@ -38,8 +53,16 @@ block content
         p
          b This is our benchmark.
         p We’re not just talking about changing the world: we are committed to measuring all the money we spend and design choices we make to ensure that the projects, friendships, plans and ideas created by EAGxOxford translate into tangible social good. Otherwise we could just have given the money to AMF.
+      .col-xs-10.col-md-8
+        img(src="/images/DSC_0135.jpg").img-responsive
+        small.copyright Photo courtesy of #[a(href="https://www.againstmalaria.com/") Against Malaria Foundation]
     .row
-      .col-xs-10.col-xs-offset-1.col-md-4.col-md-offset-8
+      .col-xs-10.col-md-8
+        img(src="/images/PETER_SINGER_TED_TALK_1.jpg").img-responsive
+        small.copyright TED2013: Peter Singer - #[a(href="https://www.ted.com/talks/peter_singer_the_why_and_how_of_effective_altruism?language=en") The Why and How of Effective Altruism]
+        img(src="/images/EAG_2015_ELON.jpeg").img-responsive
+        small.copyright #[a(href="http://eaglobal.org") Effective Altruism Global 2015] - Google, California
+      .col-xs-10.col-md-4
         h3 About Effective Altruism
         p Doing good better is the central premise of Effective Altruism (EA), a growing movement rethinking social impact. As a social movement, EA has already:
         ul
@@ -48,3 +71,32 @@ block content
           li Funded 30 million+ deworming treatments through SCI.
           li Transferred 75 million+ directly to the world’s poorest through GiveDirectly.
         p To find out more about EA, you can check out #[a(href="https://effectivealtruism.org", target="_blank") effectivealtruism.org].
+    .row
+      .col-xs-10.col-md-8
+        //- img(src="/images/ea-summit-2014-group-photo-web.jpg").img-responsive
+        //- small.copyright #[a(href="http://eaglobal.org") Effective Altruism Summit 2014]
+        img(src="/images/EAG_2016.jpg").img-responsive
+        small.copyright #[a(href="http://eaglobal.org") Effective Altruism Global 2016] - UC Berkeley, California
+      .col-xs-10.col-md-4
+        p
+          span#email-tagline If you’re ready to maximise your impact, you’re ready to join us.
+
+          //- Begin MailChimp Signup Form
+          #mc_embed_signup
+            form(action="//eagxoxford.us14.list-manage.com/subscribe/post?u=eda63a55fe6a7658455876e87&amp;id=7133686410", method="post", id="mc-embedded-subscribe-form", name="mc-embedded-subscribe-form", class="validate", target="_blank", novalidate).form
+              #mc_embed_signup_scroll
+                .form-group.mc-field-group
+                  //- label(for="mce-EMAIL") Email Address
+                  input#mce-EMAIL.form-control.required.email(type="email", name="EMAIL", placeholder="Email Address")
+                .form-group.mc-field-group
+                  //- label(for="mce-ISSUE") What's the world most pressing issue?
+                  textarea#mce-ISSUE.form-control(rows="5", name="ISSUE", placeholder="What's the world most pressing issue? (Optional)")
+                #mce-responses.clear
+                  .response#mce-error-response(style="display:none")
+                  .response#mce-success-response(style="display:none")
+                //- real people should not fill this in and expect good things - do not remove this or risk form bot signups
+                .mailchimp-hide(style="position: absolute; left: -5000px;", aria-hidden="true")
+                  input(type="text", name="b_eda63a55fe6a7658455876e87_7133686410", tabindex="-1", value="")
+                .form-group.clear
+                  input#mc-embedded-subscribe.button.btn.btn-default(type="submit", value="Subscribe", name="subscribe")
+          //- End mc_embed_signup
