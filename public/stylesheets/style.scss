@@ -14,16 +14,80 @@ $gray_4: #F4EFE9;
 $primary_color: $ea_blue;
 $secondary_color: $gray_1;
 
+$primary_font: "Merriweather", "Georgia", serif;
+$secondary_font: "Raleway", "Helvetica Neue", "Arial", sans-serif;
+$default_font: "Lucida Grande", Helvetica, Arial, sans-serif;
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  // padding: 50px;
+  font-size: 16px;
+  font-family: $primary_font;
+  line-height: 1.5;
 
   div {
-    margin: 10px;
+    // margin: 10px;
+  }
+  padding-bottom: 100px;
+}
+
+#banner {
+  background: url("/images/BLACK_MARBLE_EUR_AFRICA_1440.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+
+  // .img-responsive {
+  //   margin: 0 auto;
+  // }
+
+  #banner-text {
+    margin-top: 240px;
+
+    #event-org {
+      font-size: 3em;
+    }
+    #event-title {
+      font-size: 2em;
+      font-style: italic;
+      font-weight: 500;
+    }
+    #event-date {
+      font-size: 1.5em;
+      font-weight: 300;
+    }
   }
 }
 
+#top-blurb {
+  margin-top: -140px;
+  padding: 60px 70px;
+  line-height: 1.8;
+  background-color: rgba(255, 255, 255, 1.0);
+  box-shadow: 0 60px 80px rgba(0, 0, 0, 0.1);
+
+  p {
+    margin-bottom: 30px;
+  }
+}
+
+#impact {
+  margin-top: 120px;
+  padding-bottom: 40px;
+
+  h3 {
+    margin-top: 0px;
+  }
+}
+
+.copyright {
+  font-size: 12px;
+  font-style: italic;
+  text-align: right;
+}
+
 a {
-  color: #00B7FF;
+  // color: #00B7FF;
+  color: $ea_green;
 }
 

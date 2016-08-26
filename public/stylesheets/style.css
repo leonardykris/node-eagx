@@ -1,8 +1,46 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
-  body div {
-    margin: 10px; }
+  font-size: 16px;
+  font-family: "Merriweather", "Georgia", serif;
+  line-height: 1.5;
+  padding-bottom: 100px; }
+
+#banner {
+  background: url("/images/BLACK_MARBLE_EUR_AFRICA_1440.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: white; }
+  #banner #banner-text {
+    margin-top: 240px; }
+    #banner #banner-text #event-org {
+      font-size: 3em; }
+    #banner #banner-text #event-title {
+      font-size: 2em;
+      font-style: italic;
+      font-weight: 500; }
+    #banner #banner-text #event-date {
+      font-size: 1.5em;
+      font-weight: 300; }
+
+#top-blurb {
+  margin-top: -140px;
+  padding: 60px 70px;
+  line-height: 1.8;
+  background-color: white;
+  box-shadow: 0 60px 80px rgba(0, 0, 0, 0.1); }
+  #top-blurb p {
+    margin-bottom: 30px; }
+
+#impact {
+  margin-top: 120px;
+  padding-bottom: 40px; }
+  #impact h3 {
+    margin-top: 0px; }
+
+.copyright {
+  font-size: 12px;
+  font-style: italic;
+  text-align: right; }
 
 a {
-  color: #00B7FF; }
+  color: #33C3CC; }
